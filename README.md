@@ -1,2 +1,2 @@
-# social-network
+# не social-network
 Created new empty project
