@@ -1,0 +1,65 @@
+.container:after {/*Обратите внимание, что после того, как мы применили обтекание, шапка исчезла. Это произошло потому, что плавающие элементы (для которых задано свойство float) изымаются из нормального потока и родительский контейнер больше не видит их высоту, поэтому и элемент <header> и элемент внутри него с классом .container схлопнулись. Чтобы исправить эту ситуацию, воспользуемся очисткой потока для элемента с классом .container:*/
+  content: "";
+  display: table;
+  clear: both;
+  background-color: orange;
+}
+.main{
+	background-color:black;
+}
+.logo{
+	background-image:url(img/log.jpg);
+	
+}
+.container {
+  width: 100%;
+  /*max-width: 1024px; максимальная ширина может иметь другое значение*/
+  max-width:98%;
+  padding: 0 15px;
+  margin: 0 auto;
+  height:250px;
+  /*background-color: red;*/
+}
+.logo {
+  float: left;
+}
+nav {
+  float: right;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block; /*один из способов разместить элементы в строку*/
+}
+
+ nav a {
+  text-decoration: none;
+  line-height: 38px;
+}
+.container:after, .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row {
+  margin-bottom: 50px;
+  background-color:red;
+}
+.col-3-5 {
+  width: 60%;
+  float: left;
+  background-color:aqua;
+}
+.col-1-5 {
+  width: 20%;
+  float: left;
+  background-color:magenta;
+}
+.col-1-3 {
+  width: 33.3333333333%;
+  float: left;
+  background-color:aqua;
+}
