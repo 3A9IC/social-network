@@ -1,4 +1,4 @@
-.container:after {/*Обратите внимание, что после того, как мы применили обтекание, шапка исчезла. Это произошло потому, что плавающие элементы (для которых задано свойство float) изымаются из нормального потока и родительский контейнер больше не видит их высоту, поэтому и элемент <header> и элемент внутри него с классом .container схлопнулись. Чтобы исправить эту ситуацию, воспользуемся очисткой потока для элемента с классом .container:*/
+.container:after {/*очистка потока для элемента с классом .container:*/
   content: "";
   display: table;
   clear: both;
@@ -8,37 +8,98 @@
 	background-color:black;
 }
 .logo{
+	  line-height: 38px;
 	background-image:url(img/log.jpg);
 	
 }
 .container {
-  width: 100%;
-  /*max-width: 1024px; максимальная ширина может иметь другое значение*/
-  max-width:98%;
+  width: 98%;
+  /*max-width: 1024px;  Если значение ширины (width) больше значения max-width, то ширина элемента принимается равной значению max-width*/
+  max-width: 1450px;/*Сделано для того, что бы на больших экранах не бегать глазами по всему экрану*/
   padding: 0 15px;
-  margin: 0 auto;
-  height:250px;
-  /*background-color: red;*/
+  margin: 0 auto; /*Устанавливает величину отступа от каждого края элемента*/
+  height:250px;/*Высота*/
+  background-color: orange;
 }
+.container {
+  width: 98%;
+  /*max-width: 1024px;  Если значение ширины (width) больше значения max-width, то ширина элемента принимается равной значению max-width*/
+  max-width: 1450px;/*Сделано для того, что бы на больших экранах не бегать глазами по всему экрану*/
+  padding: 0 15px;
+  margin: 0 auto; /*Устанавливает величину отступа от каждого края элемента*/
+  height:250px;/*Высота*/
+  background-color: orange;
+}
+/*НАЧАЛО ОПИСАНИЕ ГОЛОВЫ*/
 .logo {
   float: left;
 }
-nav {
-  float: right;
+
+.one {
+  width: 100%;/* обрезка меню на ширину в 660 пикс*/
+  margin: 0 auto 30px;
+  background-color:green;
 }
-nav ul {
+ul {/*Отступы в менюшке у всех UL*/
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+}
+.topmenu > li {
+  display: inline-block;/*Выстраивает кнопки меню в ряд*/
+  margin-right: 30px;
+  position: relative;
+}
+a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  /*outline: none;*/
+  font-family: 'Lora', serif;
+  color: #695753;
+}
+.submenu {/*Отвечает за выпадающее меню*/
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200%;
+  /*z-index: 10;*/
+}
+.one ul {/**/
+  background: #ECDAD6;
+}
+.one .submenu {/*Скрывает подменю*/
+  display: none;
+}
+.one ul li:hover .submenu {/*При наведение мышки(hover) происходит описанное действие*/
+  display: block;
+  background: #b19891;
+}
+.submenu a {/*При наведение мышки(hover) происходит описанное действие*/
+  font-size:11pt;
+}
+.one li a {/*ПРименяем изменение текста в выпадающ. меню*/
+  border-bottom: 1px solid rgba(255,255,255,.3);
+  color: white;
+}
+/*КОНЕЦ ОПИСАНИЯ ГОЛОВЫ*/
+/*nav {
+  float: left ;
+  margin-left: 15px;
+}*/
+/*nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-nav li {
+}*/
+/*nav li {
   display: inline-block; /*один из способов разместить элементы в строку*/
-}
+/*}*/
 
- nav a {
+ /*nav a {
   text-decoration: none;
   line-height: 38px;
-}
+}*/
 .container:after, .row:after {
   content: "";
   display: table;
@@ -52,6 +113,8 @@ nav li {
   width: 60%;
   float: left;
   background-color:aqua;
+  /*border: 1px solid #333;*/
+  /*border: 5px black;*//*Бордер не работает почему то?*/ 
 }
 .col-1-5 {
   width: 20%;
