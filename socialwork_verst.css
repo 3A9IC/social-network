@@ -1,29 +1,35 @@
-.container:after {/*очистка потока для элемента с классом .container:*/
-  content: "";
+/*.container:after {*//*очистка потока для элемента с классом .container:*/
+  /*content: "";
   display: table;
   clear: both;
   background-color: orange;
-}
+}*/
 .main{
 	background-color:black;
-}
-.logo{
-	  line-height: 38px;
-	background-image:url(img/log.jpg);
+	position:relative;
+	/*margin-top: 250px;*/
+	top: 38px;
 	
+	z-index:0;
 }
 body{
 	margin:0;
+	overflow:auto;
 }
 
 .container {
-  width: 98%;
-  /*max-width: 1024px;  Если значение ширины (width) больше значения max-width, то ширина элемента принимается равной значению max-width*/
-  max-width: 1450px;/*Сделано для того, что бы на больших экранах не бегать глазами по всему экрану*/
-  padding: 0 15px;
-  margin: 0 auto; /*Устанавливает величину отступа от каждого края элемента*/
-  height:250px;/*Высота*/
-  background-color: orange;
+	display: inline-table;*/ /*что бы футер встал наместо, расскоментировать!!!!!!!!!!!!!!!1*/
+	width: 98%;
+	/*max-width: 1024px;  Если значение ширины (width) больше значения max-width, то ширина элемента принимается равной значению max-width*/
+	/*max-width: 1450px;*//*Сделано для того, что бы на больших экранах не бегать глазами по всему экрану*/
+	padding: 0 15px;
+	/*margin: 150px;*/ /*Устанавливает величину отступа от каждого края элемента*/
+	/*top: 100px;*/
+	margin: 0 auto;
+	height:400px;/*Высота*/
+	position:relative;
+	background-color: orange;
+	z-index:200;
 }
 /*НАЧАЛО ОПИСАНИЕ ГОЛОВЫ*/
 .logo {
@@ -31,7 +37,7 @@ body{
 }
 
 .one {
-  width: 100%;/* обрезка меню на ширину в 660 пикс*/
+  width: 100%;
   /*margin: 0 auto 30px;*/
   background-color:green;
 }
@@ -42,7 +48,25 @@ ul {/*Отступы в менюшке у всех UL*/
 }
 header{
 	position:fixed;
+	top: 0px;
 	width: 100%;
+	z-index:100;
+}
+footer:after{
+	content:"";
+	display:table;
+	clear:both;
+}
+footer{
+	/*top: 10px;*/
+	width:100%;
+	position:relative;
+	/*padding:5px;*/
+	 /*max-width: 1450px;*/
+  background-color: blue;	 
+	/*margin-top:450px;*/
+	z-index:900;
+	top:38px;
 }
 .topmenu > li {
   display: inline-block;/*Выстраивает кнопки меню в ряд*/
@@ -80,7 +104,7 @@ a {
 /*.submenu input {
   margin: 10px;
 }*/
-.submenu li a {/*ПРименяем изменение текста в выпадающ. меню*/
+.submenu a {/*ПРименяем изменение текста в выпадающ. меню*/
   border-bottom: 1px solid rgba(255,255,255,.3);
   color: white;
 }
@@ -97,20 +121,21 @@ a {
 /*nav li {
   display: inline-block; /*один из способов разместить элементы в строку*/
 /*}*/
-
  /*nav a {
   text-decoration: none;
   line-height: 38px;
 }*/
-.container:after, .row:after {
+
+/*.container:after, .row:after {
   content: "";
   display: table;
   clear: both;
-}
-.row {
+}*/
+
+/*.row {
   margin-bottom: 50px;
   background-color:red;
-}
+}*/
 .col-3-5 {
   width: 60%;
   float: left;
@@ -122,9 +147,13 @@ a {
   width: 20%;
   float: left;
   background-color:magenta;
+  /*overflow:auto;*/
 }
 .col-1-3 {
-  width: 33.3333333333%;
+	display: inline;
+  /*width: 33.3333333333%;*/
+  width: 32%;
   float: left;
   background-color:aqua;
+  /*padding:8px;*/ /*поля, из-за которых может сломаться дизайн, если выйдет за ширь*/
 }
