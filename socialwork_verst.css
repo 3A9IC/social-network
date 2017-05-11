@@ -28,8 +28,22 @@ body{
 	margin: 0 auto;
 	height:400px;/*Высота*/
 	position:relative;
-	background-color: orange;
-	z-index:200;
+	background-color: #FAEBD7;
+	top:38px;
+	z-index:0;
+	
+
+}
+#reg_form{
+    position: absolute; /* Абсолютное позиционирование */
+	border-radius:10px;
+	border: 1px solid #7a7b7e;
+	left:45%;
+	top:30%;
+    width: 200px; /* Ширина слоя  */
+    background: white; /* Цвет фона */
+    color: white;  /* Цвет текста */ 
+   
 }
 /*НАЧАЛО ОПИСАНИЕ ГОЛОВЫ*/
 .logo {
@@ -137,23 +151,34 @@ a {
   background-color:red;
 }*/
 .col-3-5 {
-  width: 60%;
-  float: left;
-  background-color:aqua;
+	width: 59%;
+	display:inline;
+	float: left;
+	background-color:#FFFAFA;
+  	border: 1px solid #7a7b7e;
+	border-radius:10px;
+	margin:10px;
   /*border: 1px solid #333;*/
   /*border: 5px black;*//*Бордер не работает почему то?*/ 
 }
 .col-1-5 {
-  width: 20%;
-  float: left;
-  background-color:magenta;
+	display:inline;
+	width: 19%;
+	float: left;
+	background-color:#FFFAFA;
+  	border: 1px solid #7a7b7e;
+	border-radius:10px;
+	margin-top:10px;
   /*overflow:auto;*/
 }
 .col-1-3 {
 	display: inline;
   /*width: 33.3333333333%;*/
-  width: 32%;
-  float: left;
-  background-color:aqua;
+	width: 32%;
+	float: left;
+	background-color:aqua;
   /*padding:8px;*/ /*поля, из-за которых может сломаться дизайн, если выйдет за ширь*/
+}
+.page_left{	
+	padding:15px 15px 0 15px;	
 }
