@@ -1,0 +1,18 @@
+{% extends 'blog/base_menu_list.html' %}
+
+{% block login %}
+	<li><a>Вход</a>
+		<ul class="submenu">
+			<form action="/login/" method="post">
+				{% csrf_token %}
+				<a>Логин<input type="username"></a>
+				<a>Пароль<input type="password"></a>
+				<a><input type="submit" value="Войти"></a>
+				{% if login_error %}
+					{{ login_error }}
+				{% endif %}
+			</form>
+			<a href="reg_form.html">Регистрация</a>
+		</ul>
+	</li>
+{% endblock  %}
