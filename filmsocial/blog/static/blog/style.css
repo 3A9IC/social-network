@@ -1,0 +1,220 @@
+/*.container:after {*//*очистка потока для элемента с классом .container:*/
+  /*content: "";
+  display: table;
+  clear: both;
+  background-color: orange;
+}*/
+.main{
+	background-color:black;
+	position:relative;
+	/*margin-top: 250px;*/
+	top: 38px;
+	
+	z-index:0;
+}
+body{
+	margin:0;
+	overflow:auto;
+	background-color: #FAEBD7;
+}
+
+.container {
+	display: inline-table;*/ /*что бы футер встал наместо, расскоментировать!!!!!!!!!!!!!!!1*/
+	width: 98%;
+	/*max-width: 1024px;  Если значение ширины (width) больше значения max-width, то ширина элемента принимается равной значению max-width*/
+	/*max-width: 1450px;*//*Сделано для того, что бы на больших экранах не бегать глазами по всему экрану*/
+	padding: 0 15px;
+	/*margin: 150px;*/ /*Устанавливает величину отступа от каждого края элемента*/
+	/*top: 100px;*/
+	margin: 0 auto;
+	height:400px;/*Высота*/
+	position:relative;
+	top:38px;
+	z-index:0;
+	
+
+}
+#reg_form{
+    position: absolute; /* Абсолютное позиционирование */
+	border-radius:10px;
+	border: 1px solid #7a7b7e;
+	left:45%;
+	top:30%;
+    width: 200px; /* Ширина слоя  */
+    background: white; /* Цвет фона */
+    color: black;  /* Цвет текста */ 
+   
+}
+#reg_form a{
+	margin:10px 10px 0 10px;
+	padding:10px;
+}
+/*НАЧАЛО ОПИСАНИЕ ГОЛОВЫ*/
+.logo {
+  float: left;
+}
+span{
+	color:orange;
+	text-align:center;
+}
+ul {/*Отступы в менюшке у всех UL*/
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+}
+header{
+	position:fixed;
+	top: 0px;
+	width: 100%;
+	z-index:100;
+}
+footer:after{
+	content:"";
+	display:table;
+	clear:both;
+}
+footer{
+	/*top: 10px;*/
+	width:100%;
+	position:relative;
+	/*padding:5px;*/
+	 /*max-width: 1450px;*/ 
+	/*margin-top:450px;*/
+	z-index:900;
+	top:38px;
+}
+.footer_copy
+{
+	padding:10px 15px 15px 15px;
+}
+.topmenu > li {
+  display: inline-block;/*Выстраивает кнопки меню в ряд*/
+  margin-right: 30px;
+  position: relative;
+}
+header a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-family: 'Lora', serif;
+  color: #695753;
+}
+
+.page_left a {
+  text-decoration:none;
+  font-family: 'Lora', serif;
+  color: #695753;
+  /*margin-left:10%;*/
+}
+.submenu {/*Отвечает за выпадающее меню*/
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 310%;
+  /*z-index: 10;*/
+}
+nav ul {/**/
+  background: #ECDAD6;
+}
+nav .submenu {/*Скрывает подменю*/
+  display: none;
+}
+nav ul li:hover .submenu {/*При наведение мышки(hover) происходит описанное действие*/
+  display: block;
+  background: #b19891;
+}
+.submenu a {/*При наведение мышки(hover) происходит описанное действие*/
+  font-size:11pt;
+}
+/*.submenu input {
+  margin: 10px;
+}*/
+.submenu a {/*ПРименяем изменение текста в выпадающ. меню*/
+  border-bottom: 1px solid rgba(255,255,255,.3);
+  color: white;
+}
+/*КОНЕЦ ОПИСАНИЯ ГОЛОВЫ*/
+/*nav {
+  float: left ;
+  margin-left: 15px;
+}*/
+/*nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}*/
+/*nav li {
+  display: inline-block; /*один из способов разместить элементы в строку*/
+/*}*/
+ /*nav a {
+  text-decoration: none;
+  line-height: 38px;
+}*/
+
+/*.container:after, .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}*/
+
+/*.row {
+  margin-bottom: 50px;
+  background-color:red;
+}*/
+.col_middle {
+	width: 59%;
+	display:inline;
+	float: left;
+	background-color:#FFFAFA;
+  	border: 1px solid #7a7b7e;
+	border-radius:10px;
+	margin:10px;
+  /*border: 1px solid #333;*/
+  /*border: 5px black;*//*Бордер не работает почему то?*/ 
+}
+.col_left {
+	display:inline;
+	width: 20%;
+	float: left;
+  /*overflow:auto;*/
+}
+.col_right {
+	display:inline;
+	width: 14%;
+	float: right;
+  /*overflow:auto;*/
+}
+.page_block{
+	background-color:#FFFAFA;
+  	border: 1px solid #7a7b7e;
+	border-radius:10px;
+	margin-top:10px;
+}
+.col-1-3 {
+	display: inline;
+  /*width: 33.3333333333%;*/
+	width: 32%;
+	float: left;
+	background-color:aqua;
+  /*padding:8px;*/ /*поля, из-за которых может сломаться дизайн, если выйдет за ширь*/
+}
+.page_step{	
+	padding:15px 15px 0 15px;	
+}
+.page_text{
+	text-align:center;
+	padding:0 15px 0 15px;
+	/*font-size:13px;*/
+}
+.date{
+	color:orange;
+}
+.sub_title{
+	width: 253px;
+	margin-left:20px;
+	font-size: 16px;
+	font-weight: bold;
+}
+p{
+	font-size:14px;
+}
