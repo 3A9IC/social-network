@@ -1,0 +1,178 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>FilmSoc | filmsoc.ru</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="/blog" class="logo" >FS</a>
+				<ul class ="topmenu">
+					<li><a href="/blog/mainpage">Главная страница</a></li>
+					<li><a href="/blog/news">Новости</a></li>
+					<li><a href="/blog/message">Сообщения</a></li>
+					<li><a href="/blog/groups">Группы</a></li>
+					<li><a>Кино</a>
+							<ul class="submenu">
+							<a href="">График премьер</a>
+							<a href="">Жанры</a>
+							<a href="">Топы</a>
+						</ul>
+					</li>
+					<li><a>Вход</a>
+						<ul class="submenu">
+							<form action="">
+								<a>E-mail<input type="email"></a>
+								<a>Password<input type="text"></a>
+								<a><input type="submit"></a>
+							</form>
+							<a href="reg_form.html">Регистрация</a>
+						</ul>
+					</li>
+			</nav>
+		</header>
+		
+		<!--<div class ="main">-->
+			<div class ="container">
+					<div class="col_left">
+						<div class="page_block">
+							<div class="page_step">
+								<img src="{% static 'blog/images/BSVhRVRPAg0.png' %}" width="100%">
+							</div>
+							<div class="page_step" align=center>
+								Елена Кондрашова
+								25 лет, г.Москва
+							</div>
+						</div>
+						<div class="page_block">
+							<div class="page_step">Любимые фильмы
+							</div>
+							<div class="page_step" align=center>
+								<a href="https://www.kinopoisk.ru/film/258687/"><img src="{% static 'blog/images/interstellar.jpg' %}" width="80%"></img></a>
+							</div>
+							<div class="page_text">
+								Интерстеллар 10 из 10
+							</div>
+							<div class="page_step" align=center>
+								<a href="https://www.kinopoisk.ru/film/807682/"><img src="{% static 'blog/images/logan.jpg' %}" width="80%"></img></a>
+							</div>
+							<div class="page_text">
+								Логан 9 из 10
+							</div>
+							<div class="page_step" align=center>
+								<a href="https://www.kinopoisk.ru/film/277328/"><img src="{% static 'blog/images/warcraft.jpg' %}" width="80%"></img></a>
+							</div>
+							<div class="page_text">
+								Варкрафт 9.4 из 10
+							</div>
+						</div>
+					</div>
+					<div class="col_middle page_step">
+						<div class="sub_title">
+							Группы
+						</div>
+						<br><br>
+							<h2>Тут позже будут группы </h2>
+							Тут позже будут группы 
+					</div>
+					<div class="col_right">
+						<div class="page_block">
+								<div class="page_step">
+									<img src="{% static 'blog/images/alien.jpg' %}" width="100%">
+								</div>
+								<div class="page_text date">
+									18 мая
+								</div>
+								<div class="page_text">
+									<a href="https://www.kinopoisk.ru/film/695548/">Чужой: Завет</a>
+								</div>
+						</div>
+						<div class="page_block">
+								<div class="page_step">
+									<img src="{% static 'blog/images/pirates.jpg' %}" width="100%">
+								</div>
+								<div class="page_text date">
+									25 мая
+								</div>
+								<div class="page_text">
+									<a href="https://www.kinopoisk.ru/film/575180/">Пираты Карибского моря: Мертвецы не рассказывают сказки</a>
+								</div>
+						</div>
+						<div class="page_block">
+								<div class="page_step">
+									<img src="{% static 'blog/images/wonder woman.jpg'%}" width="100%">
+								</div>
+								<div class="page_text date">
+									1 июня
+								</div>
+								<div class="page_text">
+									<a href="https://www.kinopoisk.ru/film/102383/">Чудо-женщина</a>
+								</div>
+						</div>
+						<div class="page_block">
+								<div class="page_step">
+									<img src="{% static 'blog/images/baywatch.jpg'%}" width="100%">
+								</div>
+								<div class="page_text date">
+									1 июня
+								</div>
+								<div class="page_text">
+									<a href="https://www.kinopoisk.ru/film/468940/">Спасатели Малибу</a>
+								</div>
+						</div>
+						<div class="page_block">
+								<div class="page_step">
+									<img src="{% static 'blog/images/pirates.jpg'%}" width="100%">
+								</div>
+								<div class="page_text date">
+									25 мая
+								</div>
+								<div class="page_text">
+									<a href="https://www.kinopoisk.ru/film/575180/">Пираты Карибского моря: Мертвецы не рассказывают сказки</a>
+								</div>
+						</div>
+						<div class="page_block">
+								<div class="page_step">
+									<img src="{% static 'blog/images/annakarenina.jpg'%}" width="100%">
+								</div>
+								<div class="page_text date">
+									8 июня
+								</div>
+								<div class="page_text">
+									<a href="https://www.kinopoisk.ru/film/953411/">Анна Каренина. История Вронского</a>
+								</div>
+						</div>
+						<div class="page_block">
+								<div class="page_step">
+									<img src="{% static 'blog/images/transformers.jpg'%}" width="100%">
+								</div>
+								<div class="page_text date">
+									22 июня
+								</div>
+								<div class="page_text">
+									<a href="https://www.kinopoisk.ru/film/811609/">Трансформеры: Последний рыцарь</a>
+								</div>
+						</div>
+					</div>
+				<!--<div class="row">
+					  <div class="col-1-2">AAAAAAAAAAAA</div>
+				</div>
+				<div class="row">
+					  <div class="col-1-4">BLYYY</div>
+				</div>*/-->
+			</div>
+		<!--</div>-->
+		
+		<footer>
+			<hr>
+		
+			<div class="footer_copy">
+				Copyrigth &copy; Tsarkov
+			</div>
+		</footer>
+		
+	</body>
+</html>

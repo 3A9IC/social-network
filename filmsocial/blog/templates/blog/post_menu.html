@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>FilmSoc | filmsoc.ru</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
+	</head>
+	<body>
+		{% block content %}
+			<p>{{ post.datetime }}</p>
+			<h2>{{ post.title }}</h2>
+			<p>{{ post.content }}</p>
+		{% endblock %}
+			<div id="reg_form" >
+				<form action="">
+					<a>E-mail<input type="email"></a>
+					<a>Password<input type="password"></a>
+					<a>Name<input type="name" pattern="[A-Za-z]*"></a>
+					<a>Surname<input type="sname" pattern="[A-Za-z]*"></a>
+					<a>Phone<input type="tel"pattern="8[0-9]{10}"></a>
+					<a><input type="submit"></a>
+				</form>
+			</div>
+		
+		
+	</body>
+</html>
