@@ -1,6 +1,7 @@
-{% load staticfiles %}
+﻿{% load staticfiles %}
+
 <!DOCTYPE html>
-<html>	
+<html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>FilmSoc | filmsoc.ru</title>
@@ -11,11 +12,7 @@
 			<nav>
 				<a href="/blog" class="logo" >FS</a>
 				<ul class ="topmenu">
-					<!--<li><a href="mainpage">main page</a></li>
-					<li><a href="{{ asd }}">News</a></li>
-					<li><a href="message">Message</a></li>
-					<li><a href="groups">Groups</a></li>-->
-					{%for post in object_list%}
+					{%for post in basemenu%}
 						<li><a href="{{ post.get_absolute_url }}">{{ post.content }}</a></li>
 					{%endfor%}
 					<li><a>Кино</a>
@@ -25,29 +22,13 @@
 							<a href="">Топы</a>
 						</ul>
 					</li>
-					<!--<li><a>Вход</a>
-						<ul class="submenu">
-							<form action="">
-								<a>E-mail<input type="email"></a>
-								<a>Password<input type="text"></a>
-								<a><input type="submit"></a>
-							</form>
-							<a href="reg_form.html">Регистрация</a>
-						</ul>
-						
-					</li>-->
 					{% if username %}
 						<li><a href="/auth/logout/">Выйти ({{ username }})</a></li>
 					{% else %}
-						<li><a href="/auth/login/">Войти</a></li>
-						12312312
-						{% block login %}
-						{% endblock login %}
+						{%include 'loginsys/login.html' %}
 					{% endif %}
 			</nav>
 		</header>
-		
-		<!--<div class ="main">-->
 			<div class ="container">
 					<div class="col_left">
 						<div class="page_block">
@@ -87,7 +68,6 @@
 							Бог-отец, бог-сын и одни красивые похороны
 						</div>
 						<br><br>
-
 						<p>Кинокомиксы заполонили планету. Очередной раз после просмотра очередного бэтмена против очередного супермена смачно плюёшь в пол и обещаешь себе, что больше никогда. Вот сейчас уж точно. А потом начинаешь рыскать, ища повод сделать это ещё раз, и студии, как недобросовестные полицейские, подбрасывают тебе этот повод, словно пакетик с героином. «Стражи Галактики. Часть 2» — из таких, с поводом.</p>
 
 						<p>Причём кинокомикс-кинокомедия — уже не свежий приём. Он был таким в 2014-м, когда вышла первая часть «Стражей». Потом были и «Человек-муравей», и «Дэдпул», да и Бенедикт Камбербэтч в «Докторе Стрэндже» проявил себя старательным комиком. Да что там говорить, если даже унылые DC Comics выдавили из себя полуулыбку-полугримасу, сняв «Отряд самоубийц». Нужно было что-то ещё. И оно нашлось. Даже два чего-то ещё. Первое — на предварительных просмотрах сиквел «Стражей Галактики» вызвал 100 процентов положительных отзывов, что есть большая редкость. Второе — один заслуживающий доверия человек киномира передал мне слова другого заслуживающего доверия человека киномира (как тесен киномир, теснее обычного мира!) о том, что для режиссёра и сценариста Джеймса Ганна «Стражи» — не просто бизнес. Это любовь. Так что у меня появился не один, а целых два повода посмотреть «Стражей Галактики — 2».</p>
@@ -115,92 +95,13 @@
 						<p>Шедевр? А кто заказывал шедевр? Не надо нам по пять шедевров в год! Присоединюсь к Антону Долину, который охарактеризовал этот фильм словом «славный». И, вне всяких сомнений, вторые «Стражи Галактики» нужно посмотреть в кино (до конца титров, там пять дополнительных сцен) — получить удовольствие и начать предвкушать славную третью часть.</p>
 					</div>
 					<div class="col_right">
-						<div class="page_block">
-								<div class="page_step">
-									<img src="{% static 'blog/images/alien.jpg' %}" width="100%">
-								</div>
-								<div class="page_text date">
-									18 мая
-								</div>
-								<div class="page_text">
-									<a href="https://www.kinopoisk.ru/film/695548/">Чужой: Завет</a>
-								</div>
-						</div>
-						<div class="page_block">
-								<div class="page_step">
-									<img src="{% static 'blog/images/pirates.jpg' %}" width="100%">
-								</div>
-								<div class="page_text date">
-									25 мая
-								</div>
-								<div class="page_text">
-									<a href="https://www.kinopoisk.ru/film/575180/">Пираты Карибского моря: Мертвецы не рассказывают сказки</a>
-								</div>
-						</div>
-						<div class="page_block">
-								<div class="page_step">
-									<img src="{% static 'blog/images/wonder woman.jpg'%}" width="100%">
-								</div>
-								<div class="page_text date">
-									1 июня
-								</div>
-								<div class="page_text">
-									<a href="https://www.kinopoisk.ru/film/102383/">Чудо-женщина</a>
-								</div>
-						</div>
-						<div class="page_block">
-								<div class="page_step">
-									<img src="{% static 'blog/images/baywatch.jpg'%}" width="100%">
-								</div>
-								<div class="page_text date">
-									1 июня
-								</div>
-								<div class="page_text">
-									<a href="https://www.kinopoisk.ru/film/468940/">Спасатели Малибу</a>
-								</div>
-						</div>
-						<div class="page_block">
-								<div class="page_step">
-									<img src="{% static 'blog/images/pirates.jpg'%}" width="100%">
-								</div>
-								<div class="page_text date">
-									25 мая
-								</div>
-								<div class="page_text">
-									<a href="https://www.kinopoisk.ru/film/575180/">Пираты Карибского моря: Мертвецы не рассказывают сказки</a>
-								</div>
-						</div>
-						<div class="page_block">
-								<div class="page_step">
-									<img src="{% static 'blog/images/annakarenina.jpg'%}" width="100%">
-								</div>
-								<div class="page_text date">
-									8 июня
-								</div>
-								<div class="page_text">
-									<a href="https://www.kinopoisk.ru/film/953411/">Анна Каренина. История Вронского</a>
-								</div>
-						</div>
-						<div class="page_block">
-								<div class="page_step">
-									<img src="{% static 'blog/images/transformers.jpg'%}" width="100%">
-								</div>
-								<div class="page_text date">
-									22 июня
-								</div>
-								<div class="page_text">
-									<a href="https://www.kinopoisk.ru/film/811609/">Трансформеры: Последний рыцарь</a>
-								</div>
-						</div>
+						{%for eachcol in base_col%}
+							{%include 'blog/base_col.html' %}
+						{%endfor%}
 					</div>
-				<!--<div class="row">
-					  <div class="col-1-2">AAAAAAAAAAAA</div>
-				</div>
-				<div class="row">
-					  <div class="col-1-4">BLYYY</div>
-				</div>*/-->
+				
 			</div>
-		<!--</div>-->
+		
 		
 		<footer>
 			<hr>

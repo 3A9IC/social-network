@@ -1,0 +1,12 @@
+{% load staticfiles %}
+	<div class="page_block">
+		<div class="page_step">
+			<img src="/static/{{ eachcol.urlpic }} " width="100%">
+		</div>
+		<div class="page_text date">
+			{{eachcol.date}}
+		</div>
+		<div class="page_text">
+			<a href="{{ eachcol.url }}">{{ eachcol.title }}</a>
+		</div>
+	</div>
